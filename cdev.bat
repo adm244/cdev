@@ -45,9 +45,9 @@ MKDIR "%projectspath%\%2\tools"
 MKDIR "%projectspath%\%2\data"
 
 SET project=%2
-SET bin=..\bin
-SET source=..\code
-SET tools=..\tools
+SET bin=%projectspath%\%2\bin
+SET source=%projectspath%\%2\code
+SET tools=%projectspath%\%2\tools
 
 IF EXIST "%~dp0\tools\" COPY "%~dp0\tools\*" "%projectspath%\%2\tools"
 IF EXIST "%projectspath%\%2\tools\build.bat" CALL %projectspath%\%2\tools\build.bat setprjname %2
